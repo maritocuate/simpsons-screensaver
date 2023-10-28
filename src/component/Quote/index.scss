@@ -2,6 +2,7 @@
   display: block;
   padding: 10em;
   @media (max-width: 992px) {
+    padding: 0;
     h1 {
       font-size: 3em;
     }
