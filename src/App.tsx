@@ -22,7 +22,7 @@ function App() {
         fetchData()
         setAnimationClass('fade-in')
       }, 500)
-    }, 6000)
+    }, 10000)
 
     return () => clearInterval(interval)
   }, [fetchData])
