@@ -14,7 +14,7 @@ const Quote = ({ text, author }: QuoteProps) => {
   const splittedQuote = formattedQuote.split(' ')
   const formattedAuthor = author.toUpperCase()
   return (
-    <>
+    <span id="wrapper-quote">
       <h1 id="quote">
         "
         {splittedQuote.map((word, i) => (
@@ -23,7 +23,7 @@ const Quote = ({ text, author }: QuoteProps) => {
         "
       </h1>
       <p>{formattedAuthor}</p>
-    </>
+    </span>
   )
 }
 export default Quote

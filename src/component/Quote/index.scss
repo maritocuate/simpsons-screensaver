@@ -1,7 +1,20 @@
+#wrapper-quote {
+  display: block;
+  padding: 10em;
+  @media (max-width: 992px) {
+    padding: 0;
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  }
+}
+
 #quote {
   margin: 0;
   font-size: 6em;
-  padding: 0;
   color: white;
   text-shadow:
     0 0.1em 20px rgba(0, 0, 0, 1),
