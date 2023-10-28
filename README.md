@@ -1,8 +1,8 @@
 # Simpsons Quotes App
 
-![screenshot](https://github.com/maritocuate/simpsons-screensaver/blob/main/public/screenshot.png)
-
 This is a simple React application that displays random quotes from The Simpsons TV show. The app features a fading animation for the quotes and fetches new quotes every 10 seconds. It uses the [simpsons-quotes API](https://simpsons-quotes-ten.vercel.app/) to get random quotes.
+
+![screenshot](https://github.com/maritocuate/simpsons-screensaver/blob/main/public/screenshot.png)
 
 ## Usage
 
