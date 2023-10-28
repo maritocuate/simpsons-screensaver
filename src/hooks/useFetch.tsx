@@ -5,6 +5,7 @@ type FetchStatus = 'idle' | 'fetching' | 'fetched'
 interface FetchResult<T> {
   data: T | null
   status: FetchStatus
+  fetchData: () => void
 }
 
 export function useFetch<T>(url: string): FetchResult<T> {
@@ -12,17 +13,18 @@ export function useFetch<T>(url: string): FetchResult<T> {
   const [data, setData] = useState<T | null>(null)
 
   useEffect(() => {
-    if (!url) return
-    const fetchData = async () => {
+    fetchData()
+  }, [url])
+
+  const fetchData = async () => {
+    if (url) {
       setStatus('fetching')
       const response = await fetch(url)
       const responseData: T = await response.json()
       setData(responseData)
       setStatus('fetched')
     }
+  }
 
-    fetchData()
-  }, [url])
-
-  return { status, data }
+  return { status, data, fetchData }
 }

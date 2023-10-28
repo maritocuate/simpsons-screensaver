@@ -1,9 +1,7 @@
 #wrapper-quote {
   display: block;
-  opacity: 0;
   padding: 10em;
   @media (max-width: 992px) {
-    padding: 0;
     h1 {
       font-size: 3em;
     }
@@ -11,11 +9,6 @@
       font-size: 1.5em;
     }
   }
-
-  &.fade-in {
-    opacity: 1;
-  }
-  transition: opacity 1.5s ease-in;
 }
 
 #quote {

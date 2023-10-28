@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 import './index.scss'
 
 interface QuoteProps {
@@ -12,17 +10,12 @@ const normalizeText = (text: string) => {
 }
 
 const Quote = ({ text, author }: QuoteProps) => {
-  const [visible, setVisible] = useState<boolean>(false)
   const formattedQuote = normalizeText(text)
   const splittedQuote = formattedQuote.split(' ')
   const formattedAuthor = author.toUpperCase()
 
-  useEffect(() => {
-    setVisible(true)
-  }, [])
-
   return (
-    <span id="wrapper-quote" className={visible ? 'fade-in' : ''}>
+    <span id="wrapper-quote">
       <h1 id="quote">
         "
         {splittedQuote.map((word, i) => (
