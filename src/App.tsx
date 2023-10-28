@@ -1,8 +1,6 @@
 import './App.scss'
 
 function App() {
-  const some = 'asd'
-
   return (
     <>
       <h1>
