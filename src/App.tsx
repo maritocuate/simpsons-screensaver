@@ -1,12 +1,21 @@
-import './App.scss'
+import { useFetch } from './hooks/useFetch'
 import Quote from './component/Quote'
 
+import './App.scss'
+
+type QuoteProps = {
+  text: string
+  author: string
+}
+
 function App() {
-  return (
-    <>
-      <Quote text="big yikes cool always" author="Homer Simpson" />
-    </>
+  const { status, data } = useFetch<QuoteProps>(
+    'https://simpsons-quotes-ten.vercel.app/quotes/random'
   )
+  if (status === 'fetched' && data) {
+    const { text, author } = data
+    return <Quote text={text} author={author} />
+  }
 }
 
 export default App
