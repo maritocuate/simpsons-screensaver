@@ -9,11 +9,11 @@ describe('UseTextNormalizer', () => {
   })
 
   test('normalizeText capitalizes the first letter and converts the rest to lowercase', () => {
-    const normalizedText = result.current.normalizeText('ExAmPle TeXT')
-    expect(normalizedText).toBe('Example text')
+    const normalizedText = result.current.normalizeText('ExAmPle TeXT.')
+    expect(normalizedText).toBe('Example text.')
   })
   test('removes periods at the end of text', () => {
-    const normalizedText = result.current.normalizeText('Example text.')
-    expect(normalizedText).toBe('Example text')
+    const normalizedText = result.current.normalizeText('Example text')
+    expect(normalizedText).toBe('Example text.')
   })
 })
