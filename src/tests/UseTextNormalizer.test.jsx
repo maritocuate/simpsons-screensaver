@@ -12,7 +12,7 @@ describe('UseTextNormalizer', () => {
     const normalizedText = result.current.normalizeText('ExAmPle TeXT.')
     expect(normalizedText).toBe('Example text.')
   })
-  test('removes periods at the end of text', () => {
+  test('add periods at the end of text', () => {
     const normalizedText = result.current.normalizeText('Example text')
     expect(normalizedText).toBe('Example text.')
   })

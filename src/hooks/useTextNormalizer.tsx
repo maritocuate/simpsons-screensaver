@@ -6,7 +6,7 @@ const useTextNormalizer = () => {
     let lowerText = capitalizeText + text.slice(1).toLocaleLowerCase()
     // add a period at the end of the text
     if (!lowerText.match(/[!.\u2026]$/)) lowerText = lowerText + '.'
-    return lowerText
+    return lowerText.trim()
   }, [])
 
   return { normalizeText }
