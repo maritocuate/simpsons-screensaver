@@ -29,3 +29,11 @@ This is a simple React application that displays random quotes from The Simpsons
    ```bash
    npm start
    ```
+
+## Test
+
+Tests can be performed with Vitest UI
+
+```bash
+npm test
+```
