@@ -1,3 +1,5 @@
+import useTextNormalizer from '../../hooks/useTextNormalizer'
+
 import './index.scss'
 
 interface QuoteProps {
@@ -5,11 +7,8 @@ interface QuoteProps {
   author: string
 }
 
-const normalizeText = (text: string) => {
-  return text.charAt(0).toUpperCase() + text.slice(1).toLocaleLowerCase()
-}
-
 const Quote = ({ text, author }: QuoteProps) => {
+  const { normalizeText } = useTextNormalizer()
   const formattedQuote = normalizeText(text)
   const splittedQuote = formattedQuote.split(' ')
   const formattedAuthor = author.toUpperCase()
